@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a6fa5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        button {
+            background-color: #4a6fa5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3a5a80;
+        }
+
+        #color-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff6b6b;
+            margin: 20px 0;
+            transition: all 0.5s;
+        }
+
+        #item-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #item-list li {
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 5px;
+            border-radius: 3px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: #ffffcc;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM Manipulation Demo</h1>
+        <p>Explore how JavaScript can dynamically change HTML content and styling</p>
+    </header>
+
+    <main>
+        <section id="text-manipulation">
+            <h2>Text Manipulation</h2>
+            <p id="dynamic-text">This text will change when you click the button below.</p>
+            <button id="change-text-btn">Change Text</button>
+        </section>
+
+        <section id="style-manipulation">
+            <h2>Style Manipulation</h2>
+            <p>Watch this colored box transform:</p>
+            <div id="color-box"></div>
+            <div>
+                <button id="change-color-btn">Change Color</button>
+                <button id="change-size-btn">Change Size</button>
+                <button id="change-shape-btn">Change Shape</button>
+            </div>
+        </section>
+
+        <section id="element-manipulation">
+            <h2>Adding and Removing Elements</h2>
+            <div id="list-container">
+                <ul id="item-list">
+                    <li>
+                        Item 1
+                        <button class="delete-btn">Delete</button>
+                    </li>
+                    <li>
+                        Item 2
+                        <button class="delete-btn">Delete</button>
+                    </li>
+                </ul>
+                <div id="input-container">
+                    <input type="text" id="new-item-input" placeholder="Enter a new item">
+                    <button id="add-item-btn">Add Item</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="event-handling">
+            <h2>Event Handling</h2>
+            <p>Move your mouse over this <span id="hover-element">highlighted text</span> to see it change.</p>
+            <p>Character count in the box above: <span id="char-count">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for JavaScript DOM Manipulation Tutorial</p>
+        <p id="date-display"></p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
